@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
+
+body {
+    font-family: 'Fira Code', monospace;
+    text-align: center;
+    background-color: #faf8f0;
+    margin: 0;
+    padding: 20px;
+    color: #776e65;
+}
+
+.game-container {
+    width: 22rem; /* برای نگه داشتن بازی در مرکز و کوچک‌تر */
+    margin: auto;
+    margin-top: 20px;
+    background: #bbada0;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 5rem); /* هر خانه 5rem */
+    gap: 10px;
+    background: #bbada0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.grid-cell {
+    background: #cdc1b4;
+    width: 5rem; /* عرض */
+    height: 5rem; /* ارتفاع */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px; /* گرد کردن گوشه‌ها */
+    transition: background-color 0.3s ease;
+}
+
+.score-container {
+    margin-bottom: 15px;
+}
+
+.new-game-button {
+    padding: 10px;
+    background-color: #8f7a66;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.new-game-button:hover {
+    background-color: #7c6f57;
+}
+
+/* تغییر رنگ برای مقادیر مختلف کاشی‌ها */
+.grid-cell[data-value="2"] { background-color: #eee4da; color: #776e65; }
+.grid-cell[data-value="4"] { background-color: #ede0c8; color: #776e65; }
+.grid-cell[data-value="8"] { background-color: #f2b179; color: #f9f6f2; }
+.grid-cell[data-value="16"] { background-color: #f59563; color: #f9f6f2; }
+.grid-cell[data-value="32"] { background-color: #f67c5f; color: #f9f6f2; }
+.grid-cell[data-value="64"] { background-color: #f65e3b; color: #f9f6f2; }
+.grid-cell[data-value="128"] { background-color: #edcf72; color: #f9f6f2; }
+.grid-cell[data-value="256"] { background-color: #edcc61; color: #f9f6f2; }
+.grid-cell[data-value="512"] { background-color: #edc850; color: #f9f6f2; }
+.grid-cell[data-value="1024"] { background-color: #edc53f; color: #f9f6f2; }
+.grid-cell[data-value="2048"] { background-color: #edc22e; color: #f9f6f2; }
